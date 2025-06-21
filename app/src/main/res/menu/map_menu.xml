@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_voltar"
+        android:title="Tela Principal" />
+
+    <item
+        android:id="@+id/menu_gestao"
+        android:title="Gestão de Check-in" />
+
+    <item
+        android:id="@+id/menu_relatorio"
+        android:title="Lugares mais visitados" />
+
+    <item
+        android:id="@+id/menu_tipos_mapa"
+        android:title="Tipos de Mapa">
+        <menu>
+            <item
+                android:id="@+id/menu_normal"
+                android:title="MAPA NORMAL" />
+            <item
+                android:id="@+id/menu_hibrido"
+                android:title="MAPA HÍBRIDO" />
+        </menu>
+    </item>
+</menu>
