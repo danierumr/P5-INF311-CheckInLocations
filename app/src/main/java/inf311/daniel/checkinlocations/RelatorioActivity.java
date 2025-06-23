@@ -2,6 +2,7 @@ package inf311.daniel.checkinlocations;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -43,19 +44,19 @@ public class RelatorioActivity extends AppCompatActivity {
             String nome = c.getString(c.getColumnIndexOrThrow("Local"));
             int qtd = c.getInt(c.getColumnIndexOrThrow("qtdVisitas"));
 
-            // Linha horizontal com dois TextViews
             LinearLayout linha = new LinearLayout(this);
             linha.setOrientation(LinearLayout.HORIZONTAL);
 
             TextView txtNome = new TextView(this);
             txtNome.setText(nome);
             txtNome.setLayoutParams(new LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
+                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView txtQtd = new TextView(this);
-            txtQtd.setText("Visitas: " + qtd);
+            txtQtd.setText(String.valueOf(qtd));
             txtQtd.setLayoutParams(new LinearLayout.LayoutParams(
                     0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+            txtQtd.setGravity(Gravity.END);
 
             linha.addView(txtNome);
             linha.addView(txtQtd);
